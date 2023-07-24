@@ -1,9 +1,11 @@
 package com.example.demo.domain;
+import jakarta.persistence.*;
 
-import io.micrometer.observation.transport.Propagator;
-
+@Entity
 public class Member {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     public Long getId(){
